@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "build",
+    "rootDir": "src",
+    "outDir": "dist",
 
     // vue-cli depends on webpack4 which doesn't support es2020. webpack 5 does.
     // so, to support version of vue-cli that are in use (August 2021),
     // downgrade target to es2019.
-    "target": "es2019",
-    "module": "es2020", // es2020 includes support for dynamic imports, and import.meta
+    "target": "es2020",
+    "module": "esnext", // es2020 includes support for dynamic imports, and import.meta
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -17,6 +17,9 @@
     // which include NodeJS definitions that are not applicable to a web app
     // but only those type definitions that are required
     "types": ["./node_modules/@types/css-font-loading-module"],
+
+    "declaration": true,
+    "declarationMap": true,
 
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
@@ -32,21 +35,7 @@
     // We'll strip the comments with rollup but we need them for the declaration files
     "removeComments": false,
     "baseUrl": "src",
-    "sourceMap": true,
-
-    "incremental": true,
-    "tsBuildInfoFile": "./build/ts-cache.tsbuildinfo"
+    "sourceMap": true
   },
-  "exclude": [
-    "coverage",
-    "test",
-    "node_modules",
-    "**/*.spec.ts",
-    "dist",
-    "build",
-    "examples",
-    "docs",
-    "tutorials",
-    "**/*.config.js"
-  ]
+  "include": ["src"]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "mathlive",
+  "name": "@tutorme/mathlive",
   "version": "0.72.3",
   "description": "Render and edit beautifully typeset math",
   "license": "MIT",
@@ -23,11 +23,13 @@
     "version": "bash ./scripts/version.sh",
     "postversion": "bash ./scripts/github-release.sh"
   },
-  "main": "./dist/mathlive.min.js",
-  "module": "./dist/mathlive.min.mjs",
-  "types": "./dist/public/mathlive.d.ts",
+  "main": "./dist/mathlive.js",
+  "module": "./dist/mathlive.js",
+  "types": "./dist/mathlive.d.ts",
   "files": [
-    "/dist"
+    "/dist",
+    "/css/*.css",
+    "/css/fonts"
   ],
   "prettier": {
     "arrowParens": "always",
@@ -78,7 +80,6 @@
   "devDependencies": {
     "@arnog/esbuild-plugin-less": "^1.1.0",
     "@cortex-js/prettier-config": "^1.1.1",
-    "@cortex-js/compute-engine": "^0.6.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
     "@types/css-font-loading-module": "0.0.7",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
@@ -121,5 +122,8 @@
     "mathjax",
     "katex",
     "mathquill"
-  ]
+  ],
+  "dependencies": {
+    "@cortex-js/compute-engine": "^0.6.0"
+  }
 }

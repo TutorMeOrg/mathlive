@@ -41,7 +41,7 @@ import { isBrowser, throwIfNotInBrowser } from './common/capabilities';
 export * from './public/mathlive';
 export * from './addons/auto-render';
 
-import { version as computeEngineVersion } from '@cortex-js/compute-engine';
+const computeEngineVersion = '0.6.0';
 
 /**
  * Initialize remote client for mathfield elements rendered in child frames.

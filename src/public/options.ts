@@ -8,7 +8,7 @@ import {
 } from './core';
 import type { Mathfield, Range } from './mathfield';
 import type { Selector } from './commands';
-import type { ErrorCode as MathJsonErrorCode } from '@cortex-js/compute-engine/dist/math-json.min.esm.js';
+import type { ErrorCode as MathJsonErrorCode } from '@cortex-js/compute-engine/dist/types/common/signals';
 
 /**
  * Specify behaviour for origin validation.

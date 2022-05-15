@@ -49,7 +49,7 @@ function getFileUrl() {
 // with version numbers) before finding the actual location of the library.
 // When resolving relative (to find fonts/sounds), we need to have the resolved
 // URL
-let gResolvedScriptUrl: string | null = null;
+let gResolvedScriptUrl: string = '/script.js';
 
 export function resolveRelativeUrl(url: string): string {
   if (gResolvedScriptUrl === null)

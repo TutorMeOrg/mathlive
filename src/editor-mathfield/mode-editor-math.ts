@@ -27,7 +27,7 @@ import { applyStyleToUnstyledAtoms } from '../editor-model/styling';
 import { parseLatex } from '../core/parser';
 import { PlaceholderAtom } from '../core-atoms/placeholder';
 import MathfieldElement from '../public/mathfield-element';
-import { Expression } from '@cortex-js/compute-engine/dist/types/math-json/math-json-format';
+import type { Expression } from '@cortex-js/compute-engine/dist/types/math-json/math-json-format';
 
 export class MathModeEditor extends ModeEditor {
   constructor() {
